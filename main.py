@@ -11,7 +11,7 @@ async def read_root():
 
 @app.get("/items/{itemId}", tags=['items'])
 async def read_item(itemId: int, q: Union[str, None] = None):
-    return {"item_id": item_id, "q": q}
+    return {"itemId": itemId, "q": q}
 
 @app.put("/items/{itemId}", response_model = Item, tags=['items'])
 def updateItem(itemId: int, item: Item):
